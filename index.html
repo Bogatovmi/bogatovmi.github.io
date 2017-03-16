@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Document</title>
+  <style type="text/css">
+	.squere, .squere1, .squere2, .squere3  {
+		  height: 30px;
+		  width: 30px;
+		  position:absolute;
+		  border-radius: 50%;
+		  top: 50%;
+		  left: 50%;
+		  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+		  animation-name: rot;
+		  animation-iteration-count: infinite;
+		  animation-timing-function: cubic-bezier;
+	}
+	.squere  {
+		  background-color: #226;
+		  animation-duration: 0.5s;
+	}
+	.squere1  {
+		  background-color: #600;
+		  animation-duration: 0.7s;
+	 }
+	.squere2  {
+		  background-color: #061;
+		  animation-duration: 1s;
+	  }
+	.squere3  {
+		  background-color: #ffa500;
+		  animation-duration: 1.5s;
+	 }
+	@keyframes rot {
+	  0% {
+	    	transform: rotate(0deg) translateX(50px);
+	    }
+	  100%
+	     {
+	    	transform: rotate(360deg) translateX(50px);
+	    }
+	}
+  </style>
+ </head>
+<body>
+  <div class="squere"></div>
+  <div class="squere1"></div>
+  <div class="squere2"></div>
+  <div class="squere3"></div>
+</body>
+</html>
