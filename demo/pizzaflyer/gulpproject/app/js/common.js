@@ -1,9 +1,6 @@
 $(function() {
-	// Custom JS
 
 //Animate block
-
-	
 	window.onload = function() {
 		
 		$(".baner").animated("fadeInRight", "fadeOutRight");
@@ -15,18 +12,6 @@ $(function() {
 		$(".footer-right").animated("fadeInRight","fadeOutLeft");
 
 	}
-
-	// $(document).ready(function() {
-	// $(window).load(function() {
-
-	// 	$(".loader_inner").fadeOut();
-	// 	$(".loader").delay(400).fadeOut("slow");
-
-	// 	$(".top_text h1").animated("fadeInDown", "fadeOutUp");
-	// 	$(".top_text p").animated("fadeInUp", "fadeOutDown");
-
-	// }); 
-
 
 	// Change heigth of block - header
 
