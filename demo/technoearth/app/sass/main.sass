@@ -1,0 +1,149 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+p, span, h1, h2, h3, h4, h5, h6
+	margin: 0
+	padding: 0
+
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.site-btn
+	background-color: $accent
+	border: none
+	color: #fff 
+	text-transform: uppercase
+	border-radius: 5px
+	padding: 5px 20px
+	transition: .3s
+	&:hover
+		background-color: #FFF
+		font-weight: bold
+		color: $accent
+		transition: .3s
+
+.site-header
+	position: relative
+	max-width: 1600px
+	min-height: 1067px 
+	width: 100%
+	.head
+		position: fixed
+		top: 0
+		width: 100%
+		background-color: rgba(#000, 0.5)
+		z-index: 999
+		padding: 25px 0
+		text-align: center
+		.logo
+			height: 80px
+			display: flex
+			align-items: center;
+			margin: 0 auto
+			.logo-img
+				width: 100%
+				max-width: 288px
+				max-height: 50px
+		h1,
+		h2
+			color: #fff
+			font-size: 30px
+			line-height: 40px
+		h4
+			color: #fff
+			font-size: 25px 
+	.baner-wrap	
+		margin-top: 200px
+		padding: 35px
+		color: #fff
+		z-index: 2
+		position: relative
+		width: 100%
+		height: auto
+		background-color: rgba(#000, .5)
+		text-align: center	
+		h3, h4, h5
+			text-transform: uppercase
+		h3
+			color: $accent
+			font-size: 35px
+			font-weight: bold
+		h4
+			font-size: 20px
+		h5
+			font-size: 15px
+			color: #ffde46
+		.price 
+			font-size: 50px
+			line-height: 50px	
+		.contact-form
+			width: 290px
+			display: block
+			margin: 0 auto
+			padding-top: 10px
+			input
+				font-size: 18px
+				width: 80%
+				margin: 10px
+				border-radius: 5px
+				border: none
+				height: 45px
+				padding: 0 15px
+				color: #000
+			i 
+				font-size: 25px	
+			.site-btn
+				margin-top: 20px
+.advantages
+	padding-top: 40px
+	&-head
+		text-align: center
+		color: $accent
+		text-transform: uppercase
+		h2
+			font-size: 30px
+
+
+
+
+			
+@import "media" // Всегда в конце
