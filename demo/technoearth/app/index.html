@@ -35,7 +35,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo">
-							<img class="logo-img" src="img/logo.png" alt="logo">
+							<a href="/"><img class="logo-img" src="img/logo.png" alt="logo"></a>
 						</div>
 					</div>
 					<div class="col-sm-4">
@@ -43,7 +43,19 @@
 					</div>
 					<div class="col-sm-4">
 						<h4><i class="fa fa-phone"></i> +380665157081</h4>
-						<button class="site-btn">Заказать звонок</button>
+						<a class="site-btn popup-form" href="#call-form">Заказать звонок</a>
+						<div class="hidden">
+							<div class="call-form" id="call-form">
+								<div class="contact-form">
+									<form action="">
+										<i class="fa fa-user"></i><input type="text" placeholder="Ваше имя" name="name">
+										<br>
+										<i class="fa fa-phone-square"></i><input type="tel" name="tel" placeholder="Ваш телефон (+38..)">
+										<button class="site-btn">Заказать звонок</button>
+									</form>								
+								</div>
+							</div> 
+						</div>
 					</div>
 				</div>
 			</div>
@@ -60,12 +72,12 @@
 							<h5>получи локаут Suntour в подарок</h5>
 							<div class="contact-form">
 								<form action="">
-									<i class="fa fa-user"></i><input type="text" placeholder="Ваше имя">
+									<i class="fa fa-user"></i><input type="text" placeholder="Ваше имя" name="name">
 									<br>
-									<i class="fa fa-envelope-o"></i><input type="email" placeholder="Ваш E-mail">
+									<i class="fa fa-envelope-o"></i><input type="email" placeholder="Ваш E-mail" name="email">
 									<br>
 									<i class="fa fa-phone-square"></i> <input type="tel" name="tel" placeholder="Ваш телефон (+38..)">
-									<button class="site-btn">Отправить заявку</button>
+									<button class="site-btn">Заказать сейчас</button>
 								</form>								
 							</div>
 						</div>
@@ -75,7 +87,7 @@
 		</div>
 	</header>
 	<main>
-		<div class="advantages">
+		<section class="advantages">
 			<div class="container">
 				<div class="row">
 					<div class="advantages-head">
@@ -138,114 +150,95 @@
 					</div>
 				</div>
 			</div>	
-		</div>
-		
-<div class="advantages">
+		</section>
+		<section class="galery">
+			<div class="galery-items">
+				<img src="img/galery/image-1.jpg" alt="image-1">
+				<img src="img/galery/image-2.jpg" alt="image-2">
+				<img src="img/galery/image-3.jpg" alt="image-3">
+				<img src="img/galery/image-4.jpg" alt="image-4">
+				<img src="img/galery/image-5.jpg" alt="image-5">
+				<img src="img/galery/image-6.jpg" alt="image-6">
+				<img src="img/galery/image-7.jpg" alt="image-7">
+			</div>	
+			
+
+		</section>
+
+		<section class="range">
 			<div class="container">
 				<div class="row">
-					<div class="advantages-head">
-						<h2> Преимущества воздушно-маслянной вилки </h2>
+					<div class="range-head">
+						<h2>Размерности и характеристики</h2>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="advantages-wrap">
-							<h3>Сглаживает неровности дороги</h3>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="range-wrap">
+							<div class="range-image">
+								<img src="img/fork.jpg" alt=""> 
+								<p>
+									<span>26"</span>
+								</p>
+								<div class="range-image-hovered">
+									<a class="site-btn popup-form" href="#range26">Посмотреть</a>
+									<div class="hidden">
+										<div class="call-form" id="range26">
+											<div class="contact-form">
+														26				
+											</div>
+										</div> 
+									</div>
+								</div>
+							</div>
 
-							<ul>
-								<li>Смягчает движение по бездорожью</li>
-								<li>Повышает управляемость</li>
-								<li>Позволяет развивать большую скорость</li>
-							</ul>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="advantages-wrap">
-							<h3>Сглаживает неровности дороги</h3>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="range-wrap">
+							<div class="range-image">
+								<img src="img/fork.jpg" alt=""> 
+								<p>
+									<span>27,5"</span>
+								</p>
+								<div class="range-image-hovered">
+									<a class="site-btn popup-form" href="#range275">Посмотреть</a>
+									<div class="hidden">
+										<div class="call-form" id="range275">
+											<div class="contact-form">
+														27,5				
+											</div>
+										</div> 
+									</div>
+								</div>
+							</div>
 
-							<ul>
-								<li>Смягчает движение по бездорожью</li>
-								<li>Повышает управляемость</li>
-								<li>Позволяет развивать большую скорость</li>
-							</ul>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="advantages-wrap">
-							<h3>Сглаживает неровности дороги</h3>
+					<div class="col-md-4 col-sm-4 col-xs-12">
+						<div class="range-wrap">
+							<div class="range-image">
+								<img src="img/fork.jpg" alt=""> 
+								<p>
+									<span>29"</span>
+								</p>
+								<div class="range-image-hovered">
+									<a class="site-btn popup-form" href="#range29">Посмотреть</a>
+									<div class="hidden">
+										<div class="call-form" id="range29">
+											<div class="contact-form">
+														29				
+											</div>
+										</div> 
+									</div>
+								</div>
+							</div>
 
-							<ul>
-								<li>Смягчает движение по бездорожью</li>
-								<li>Повышает управляемость</li>
-								<li>Позволяет развивать большую скорость</li>
-							</ul>
 						</div>
 					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="advantages-wrap">
-							<h3>Сглаживает неровности дороги</h3>
 
-							<ul>
-								<li>Смягчает движение по бездорожью</li>
-								<li>Повышает управляемость</li>
-								<li>Позволяет развивать большую скорость</li>
-							</ul>
-						</div>
-					</div>
 				</div>
-			</div>	
-		</div>
-		<div class="advantages">
-			<div class="container">
-				<div class="row">
-					<div class="advantages-head">
-						<h2> Преимущества воздушно-маслянной вилки </h2>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="advantages-wrap">
-							<h3>Сглаживает неровности дороги</h3>
+			</div>			
+		</section>
 
-							<ul>
-								<li>Смягчает движение по бездорожью</li>
-								<li>Повышает управляемость</li>
-								<li>Позволяет развивать большую скорость</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="advantages-wrap">
-							<h3>Сглаживает неровности дороги</h3>
-
-							<ul>
-								<li>Смягчает движение по бездорожью</li>
-								<li>Повышает управляемость</li>
-								<li>Позволяет развивать большую скорость</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="advantages-wrap">
-							<h3>Сглаживает неровности дороги</h3>
-
-							<ul>
-								<li>Смягчает движение по бездорожью</li>
-								<li>Повышает управляемость</li>
-								<li>Позволяет развивать большую скорость</li>
-							</ul>
-						</div>
-					</div>
-					<div class="col-md-3 col-sm-6 col-xs-12">
-						<div class="advantages-wrap">
-							<h3>Сглаживает неровности дороги</h3>
-
-							<ul>
-								<li>Смягчает движение по бездорожью</li>
-								<li>Повышает управляемость</li>
-								<li>Позволяет развивать большую скорость</li>
-							</ul>
-						</div>
-					</div>
-				</div>
-			</div>	
-		</div>
 		
 	</main>
 <p>Закажи велосипедную вилку Suntour Epixon и получи локаут Suntour в подарок</p>

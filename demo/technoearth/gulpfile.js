@@ -31,6 +31,8 @@ gulp.task('js', ['common-js'], function() {
 		'app/libs/waypoints/waypoints.min.js',
 		'app/libs/animate/animate-css.js',
 		'app/libs/parallax/parallax.min.js',
+		'app/libs/slick/slick.min.js',
+		'app/libs/magnific-popup/jquery.magnific-popup.min.js',
 		'app/js/common.min.js', // Всегда в конце
 		])
 	.pipe(concat('scripts.min.js'))
