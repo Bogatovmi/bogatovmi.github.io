@@ -1,0 +1,835 @@
+@import "fonts"
+@import "libs"
+@import "vars"
+@import "reset"
+
+
+html
+	background-color: #eee 
+
+button
+	border: none
+	background-color: transparent  
+	margin: 0
+	padding: 0  
+
+.site-btn
+	background-color: $accent
+	border: 2px solid #fff
+	border-radius: 5px 
+	margin: 0 
+	padding: 5px 20px  
+	color: #fff
+	width: auto
+	font-size: 17px
+	font-weight: 400
+	transition: .4s
+	&:hover
+		background-color: transparent
+		text-decoration: none
+		color: #FFF  
+		transition: .4s
+//header
+.header
+	width: 100% 
+	display: block
+	&-top
+		height: 30px 
+		background-color: $asphalt 
+		line-height: 30px
+		&-phone,
+		&-social
+			display: inline-block
+		a
+			text-decoration: none
+			display: inline-block
+			height: 30px
+			padding-left: 5px 
+			padding-right: 5px 
+			&:hover
+				color: $asphalt 
+				text-decoration: none
+				background-color: #FFF 
+			&:focus, 
+			&:active 
+			color: $grey 
+			text-decoration: none	
+		&-social
+			float: right 
+			a
+				padding-left: 10px 
+				padding-right: 10px 					
+	&-bottom
+		height: 80px 
+		background-image: url("../img/asphalt.jpg") 
+		.logo
+			height: 80px
+			display: flex
+			align-items: center
+			text-align: center
+			a
+				height: 48px
+			img
+				height: auto 
+				width: 165px 
+		.main-menu
+			position: relative
+			text-transform: uppercase 
+			font-size: 20px 
+			font-weight: 500
+			text-align: right
+			ul > li
+				display: inline-block
+				.nav-level0
+					display: inline-block
+					height: 80px
+					line-height: 80px
+					margin-left: 25px 
+				
+
+
+		a
+			text-decoration: none
+			color: $grey
+			&:hover
+				color: $accent 
+			&:focus, 
+			&:active 
+				color: $accent 
+				text-decoration: none
+				&:hover
+					color: $accent 		
+		.right-menu
+			font-size: 30px 
+			text-align: right
+			line-height: 80px 
+			.search-menu,
+			.user-menu,
+			.shopping-cart
+				display: inline-block
+				height: 80px
+				padding-left: 15px
+				&:first-child
+					padding-left: 0px 
+			.caret
+				color: $accent
+				margin-left: 7px 
+
+		.search-menu:hover .menu-i,
+		.user-menu:hover .menu-i,
+		.shopping-cart:hover .menu-i
+			color: $accent 
+
+		.search-menu-hover
+			display: none 
+			position: absolute
+			right: 0
+			z-index: 999
+			.search-wrap
+				width: 320px
+				height: 55px
+				background-color: $asphalt
+				font-size: 20px 
+				position: relative
+				line-height: 50px 
+				text-align: left 
+				padding: 0 15px 
+				input
+					width: 230px 
+					height: 40px
+					background-color: transparent
+					border: none 
+				button
+					background-color: transparent
+					border: none  
+					height: 40px
+					float: right 
+					&:hover
+						color: $accent 
+		.user-menu:hover .user-menu-hover,
+		.shopping-cart:hover .shopping-cart-hover
+			display: block
+
+		.user-menu-hover,
+		.shopping-cart-hover
+			display: none
+			position: absolute
+			right: 0
+			z-index: 999
+			text-align: center
+			width: 320px 
+			background-color: $asphalt
+			font-size: 18px 
+			padding: 15px  
+			li
+				list-style: none
+				line-height: normal 
+				a
+					height: auto 
+					cursor: pointer
+		.user-menu-hover
+			li
+				padding: 10px 0 
+
+		.shopping-cart-hover
+			text-align: left
+			padding: 0 
+			.shopping-cart-top 
+				overflow-y: auto
+				max-height: 285px
+			.shopping-cart-bottom
+				padding: 10px
+				padding-bottom: 25px 
+				text-align: center
+				line-height: normal
+				border-top: 1px solid $accent  
+				border-bottom: 7px solid $accent 
+				a
+					color: #FFF 
+				p
+					margin-bottom: 20px 
+				span
+					color: $accent 
+			.del-goods
+				background-color: transparent
+				border: none 
+				line-height: 30px 
+				color: $grey
+				&:hover
+					color: #FFF
+			li
+				float: none
+				clear: both 
+				display: block 
+				box-sizing: content-box
+				position: relative
+				padding: 10px
+				border-bottom: 1px solid rgba($grey, .4) 
+				&:after 
+					clear: both
+					content: ""
+					display: table
+				.del-goods
+					float: right 
+			h5
+				color: $accent 
+				font-size: 16px
+				line-height: 22px
+				font-weight: 600 
+				&:hover
+					color: #fff
+			img
+				height: 80px
+				float: left
+				margin: 0 15px 10px 0 
+				border: 1px solid $grey 
+			.cart-goods-price
+				clear: both
+				text-align: center
+			input[type="number"]	
+				width: 60px 
+
+
+	.hamb-menu,
+	.hamb-nav-menu
+		i
+			font-size: 30px
+			line-height: 40px 
+	.hamb-menu
+		position: relative
+
+
+	.hamb-nav-menu
+		display: none
+		position: absolute
+		z-index: 999 
+		width: 100%
+		background-color: rgba($asphalt, .7)  
+		.hamb-nav
+			margin: 20px 
+			li
+				list-style: none
+				font-size: 20px  
+				text-transform: uppercase  
+				a
+					text-decoration: none
+
+ul.hover-menu
+	display: none
+	width: 700px 
+	position: absolute
+	right: -240px
+	left: initial 
+	text-align: left
+	z-index: 999
+	background-color: #FFF
+	font-size: 16px 
+	text-transform: none  
+	font-weight: 400
+	padding: 15px
+	&>li
+		margin-left: 20px
+		margin-bottom: 5px  
+		&>a
+			color: #000
+			font-weight: 500	
+	ul.sub-menu 
+		li
+			line-height: 24px
+			display: list-item 
+			list-style: none
+			a
+				height: 1px 
+.hovered:hover .hover-menu,
+.hover-menu:hover 
+	display: block
+
+.hovered:hover
+	color: $accent
+	
+
+.hovered:hover a,
+.hover-menu:hover .hovered a:visited
+	background: url("../img/white-arrow-up.png") center bottom no-repeat
+
+.hover-link:visited
+	color: $accent
+	
+#navbar-icon
+	display: none
+	position: relative 
+	margin-top: 8px 
+	width: 35px
+	height: 35px
+	transform: rotate(0deg)
+	transition: .5s ease-in-out
+	cursor: pointer
+	opacity: 1 
+	&:hover span
+		background-color: $accent 
+.hovered ul,
+.hovered li,
+	vertical-align: top
+
+#navbar-icon span
+	display: block
+	position: absolute
+	height: 5px
+	width: 100%
+	background: $grey
+	border-radius: 9px
+	opacity: 1
+	left: 0
+	transform: rotate(0deg)
+	transition: .25s ease-in-out
+
+
+#navbar-icon span:nth-child(1)
+	top: 0px
+
+#navbar-icon span:nth-child(2)
+	top: 11px
+
+#navbar-icon span:nth-child(3)
+	top: 22px
+
+#navbar-icon.open span:nth-child(1)
+	top: 11px
+	transform: rotate(135deg)
+
+#navbar-icon.open span:nth-child(2)
+	opacity: 0
+	left: -60px
+
+#navbar-icon.open span:nth-child(3)
+	top: 11px
+	transform: rotate(-135deg)
+
+
+//header
+
+
+// Galery on homepage
+.galery-home-page
+	img
+		width: 100%
+	.slick-dots
+		z-index: 100
+		position: relative
+		margin-top: -70px
+	.slick-dots li button:before
+		font-size: 16px
+		color: $accent
+	.slick-dots li.slick-active button:before
+	    opacity: .85;
+	    color: $accent;	
+
+	.slick-prev, 
+	.slick-next,
+	.slick-prev:focus,
+	.slick-next:focus
+		z-index: 80
+		height: 100%
+		width: 100px
+		color: $accent
+	.slick-prev:hover,
+	.slick-next:hover
+		color: #fff
+	.slick-prev
+		left: 0
+	.slick-next
+		right: 0
+	.slick-prev:before
+	    content: url("../img/arrow_left.png") 
+	    font-size: 120px
+	    color: $accent
+	.slick-next:before
+		content: url("../img/arrow_right.png")  
+		font-size: 120px 
+		color: $accent
+	.slick-prev:hover:before,
+	.slick-next:hover:before
+		color: #fff	
+	.slick-slide
+		outline: none
+	&.slick-dotted.slick-slider
+		margin-bottom: 80px 
+// Galery on homepage
+
+.popular-goods-galery,
+.new-goods-galery,
+.popular-posts-galery
+	.slick-prev, 
+	.slick-next,
+	.slick-prev:focus,
+	.slick-next:focus
+		z-index: 80
+		height: 100%
+		width: 100px
+		color: $accent
+	.slick-prev:hover,
+	.slick-next:hover
+		color: #fff
+	.slick-prev
+		left: -40px
+	.slick-next
+		right: -40px
+	.slick-prev:before
+	    content: url("../img/arrow_left.png") 
+	    font-size: 120px
+	    color: $accent
+	.slick-next:before
+		content: url("../img/arrow_right.png")  
+		font-size: 120px 
+		color: $accent
+
+
+
+
+.section-wrap
+	margin-top: 40px 
+	&-header
+		border-bottom: 4px solid $accent
+		margin-bottom: 20px 
+		h3
+			font-size: 32px
+			line-height: 50px 
+			font-weight: 700 
+			text-transform: uppercase
+			color: $accent  
+	.section-galery-caret	
+		display: flex
+		align-items: flex-end
+		justify-content: space-between
+		width: 67px 
+		float: right
+		margin-top: 15px 
+		i
+			font-size: 30px 
+			color: $accent 
+			transition: .2s
+			&:hover
+				opacity: .6  
+				transition: .2s
+
+
+.goods-card			
+	width: 260px
+	height: 400px
+	background-color: #FFF
+	transition: 0.2s
+	margin: 0 auto
+	position: relative
+	&-img
+		position: relative
+		width: 100% 
+		height: 150px 
+		background-size: cover
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0 
+			width: 0
+			height: 0
+			border-bottom: 20px solid #fff
+			border-left: 260px solid transparent
+			transition: opacity 0.3s
+	&:hover  
+		box-shadow: 0 0 10px rgba(0,0,0,0.5) 
+		transition: 0.2s
+	&:hover	.goods-card-img:after
+		opacity: 0
+		transition: opacity 0.3s
+	&-info 
+		padding: 10px 20px 20px 20px
+		.goods-card-top
+			background-color: #fff3c1 
+		.goods-card-new
+			background-color: #eeffd0
+		.goods-card-discount 
+			background-color: #ffdad0
+		.goods-card-hits
+			font-size: 14px
+			color: #000 
+			font-weight: 300
+			text-align: right
+			span
+				padding: 2px 5px 
+				margin-left: 15px 
+			a
+				color: #000 
+	&-price
+		margin: 15px 0 
+		text-align: right
+		.card-old-price
+			font-size: 18px 
+			color: #adadad 
+			margin-right: 15px 
+			text-decoration: line-through
+		.card-new-price
+			font-size: 24px 
+			color: #000
+	&-heading
+		margin-bottom: 10px 
+		a
+			color: $accent
+			&:hover
+				text-decoration: none 
+				color: rgba($accent, 0.7) 
+		h4
+			font-size: 20px
+			text-transform: uppercase
+			font-weight: 500
+			line-height: 28px
+			height: 56px
+			overflow: hidden
+	&-sminfo
+		p
+			font-size: 16px 
+			color: #000  
+			line-height: 18px  
+			height: 55px
+			overflow: hidden
+	&-btn
+		opacity: 0 
+		position: absolute
+		bottom: 0 
+		width: 100% 
+		height: 80px
+		background-color: #fff
+		text-align: center
+		padding-top: 12px 
+		i
+			color: $accent
+			font-size: 28px 
+			border: 2px solid $accent
+			border-radius: 5px 
+			width: 50px
+			height: 50px
+			line-height: 48px
+			margin: 0 5px  
+			&:hover
+				color: rgba($accent, 0.7) 
+				border: 2px solid rgba($accent, 0.7) 
+	&:hover	.goods-card-btn
+		opacity: 1 	
+		transition: 0.2s		
+
+
+
+.posts-card			
+	width: 340px
+	height: 215px
+	background-color: #FFF
+	transition: 0.2s
+	margin: 0 auto
+	position: relative
+	&-img
+		position: relative
+		width: 100% 
+		height: 170px 
+		background-size: cover
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0 
+			width: 0
+			height: 0
+			border-bottom: 20px solid #fff
+			border-left: 340px solid transparent
+			transition: opacity 0.3s
+	&:hover  
+		box-shadow: 0 0 10px rgba(0,0,0,0.5) 
+		transition: 0.2s
+	&:hover	.posts-card-img:after
+		opacity: 0
+		transition: opacity 0.3s
+	&:hover	.posts-card-hover
+		opacity: 1
+		transition: opacity 0.3s
+	&-info
+		line-height: 18px
+		.posts-card-date
+			float: left 
+			width: 65px 
+			margin: 0 10px 
+			line-height: 45px 
+			font-size: 15px
+		.posts-card-heading
+			text-align: right
+			float: right 
+			font-size: 16px
+			color: #000 
+			margin-right: 10px 
+			display: inline-block
+			width: 230px 
+			overflow: hidden
+			height: 36px 
+	&-hover
+		position: absolute
+		bottom: 0 
+		width: 100% 
+		height: 46px 
+		opacity: 0 
+		line-height: 45px
+		text-align: center
+		background-color: #FFF 
+		a
+			font-size: 18px 
+			color: $accent 
+			&:hover
+				text-decoration: none
+				cursor: pointer 
+				color: rgba($accent, 0.7) 
+
+.footer
+	margin-top: 50px 
+	&-top
+		width: 100% 
+		height: auto 
+		background-color: $asphalt 
+		padding: 20px 10px 
+		h5
+			font-size: 24px
+			text-transform: uppercase
+			line-height: 30px
+			font-weight: 600  
+			height: 60px
+		.subscribe-form 
+			height: 60px
+			display: flex
+			align-items: center
+			input[type="email"]	
+				width: 300px
+				height: 43px 
+				border: none 
+				border-radius: 5px 
+				margin-right: 30px 
+				padding: 10px 
+				text-transform: uppercase
+	&-middle
+		padding: 30px 0  
+		width: 100%
+		background-image: url("../img/asphalt.jpg")
+		color: #eee	
+		a
+			color: #eee
+			&:hover
+				cursor: pointer 
+				color: #fff
+		.footer-logo
+			width: 170px
+			margin-bottom: 15px 
+		h5
+			font-size: 24px 
+			font-weight: 600 
+			text-transform: uppercase	
+			color: #FFF 
+		table
+			line-height: 22px 
+		td
+			padding: 5px 
+		li
+			list-style: none 
+			padding: 5px 0 
+	&-bottom
+		width: 100% 
+		background-color: $asphalt 
+		padding: 20px 10px 
+		&-social
+			text-align: center
+			a
+				color: $grey
+				font-size: 36px 
+				margin: 0 30px 
+				&:hover
+					color: $accent
+					cursor: pointer  
+		&-copyright
+			font-size: 14px 
+			text-align: center
+			margin: 15px 5px 0px
+
+
+
+
+//Style for breadcrumbs
+
+.breadcrumbs
+	margin: 20px 0 
+	&-img
+		position: relative
+		width: 100%
+		height: 220px
+		text-align: center
+		color: #FFF
+		line-height: 220px  
+		&-bgc
+			width: 100%
+			height: 220px
+			position: absolute
+			top: 0
+			background-color: rgba($asphalt, 0.5) 
+	h3
+		position: relative
+		color: #FFF  
+		font-size: 42px
+		text-transform: uppercase  
+//Style for breadcrumbs
+
+//Style for blog
+.blog-body
+	.blog-card
+		margin: 0 
+		padding: 0 
+.blog-post-card			
+	width: 95% 
+	height: 360px 
+	background-color: #FFF
+	transition: 0.2s
+	position: relative
+	margin-bottom: 15px 
+	.blog-post-img
+		position: relative
+		width: 100% 
+		height: 170px 
+		background-size: cover
+		background-position: center top
+		&:after
+			content: ''
+			position: absolute
+			bottom: 0 
+			right: 20px 
+			width: 0
+			height: 0
+			border-left: 20px solid transparent
+			border-right: 20px solid transparent
+			border-bottom: 20px solid #fff
+			transition: opacity 0.3s
+	&:hover  
+		box-shadow: 0 0 10px rgba(0,0,0,0.5) 
+		transition: 0.2s
+	&:hover	.blog-post-info
+		display: none 
+	&:hover	.blog-post-img
+		height: 300px
+	&:hover	.blog-post-img:after
+		opacity: 0
+		transition: opacity 0.3s
+	&:hover	.blog-post-hover
+		opacity: 1
+		transition: opacity 0.3s
+	.blog-post-info
+		padding: 5px 10px 15px 10px
+		.blog-post-date
+			width: 100% 
+			font-size: 15px
+		.blog-post-heading
+			text-align: center
+			text-transform: uppercase
+			padding: 0px 20px 
+			margin-top: 10px 
+			font-size: 18px
+			color: #000 
+			display: inline-block
+			width: 100% 
+			height: 45px 
+			overflow: hidden
+			line-height: 22px
+		.blog-post-description
+			font-size: 14px 
+			line-height: 18px
+			padding: 0 10px 
+		
+	.blog-post-hover
+		position: absolute
+		bottom: 0 
+		width: 100% 
+		height: 60px 
+		opacity: 0 
+		line-height: 60px
+		text-align: center
+		background-color: #FFF 
+		a
+			font-size: 18px 
+			color: $accent 
+			&:hover
+				text-decoration: none
+				cursor: pointer 
+				color: rgba($accent, 0.7) 
+//Style for blog
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#btn-top
+    display: none /* Hidden by default */
+    position: fixed /* Fixed/sticky position */
+    bottom: 20px /* Place the button at the bottom of the page */
+    right: 30px /* Place the button 30px from the right */
+    z-index: 99 /* Make sure it does not overlap */
+    border: none /* Remove borders */
+    outline: none /* Remove outline */
+    background-color: rgba(#555, 0.3) /* Set a background color */
+    color: white /* Text color */
+    cursor: pointer /* Add a mouse pointer on hover */
+    width: 50px
+    height: 50px /* Some padding */
+    border-radius: 50% /* Rounded corners */
+
+#btn-top:hover
+    background-color: #555 /* Add a dark-grey background on hover */
+
+@import "media" // Всегда в конце
